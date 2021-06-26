@@ -2,44 +2,39 @@ TerramEarh
 
 [Company overview]
 TerramEarth manufactures heavy equipment for the mining and agricultural industries.
-They currently have over 500 dealers and service centers in 100 countries. Their mission
-is to build products that make their customers more productive.
+They currently have over 500 dealers and service centers in 100 countries.
+Their mission is to build products that make their customers more productive.
 
 TerramEarthは、鉱業および農業産業向けの重機を製造しています。
-現在、100か国に500を超えるディーラーとサービスセンターがあります。彼らの使命
-顧客の生産性を高める製品を構築することです。
+現在、100か国に500を超えるディーラーとサービスセンターがあります。
+彼らの使命は、顧客の生産性を高める製品を構築することです。
 
 
 [Solution concept]
-There are 2 million TerramEarth vehicles in operation currently, and we see 20% yearly
-growth. Vehicles collect telemetry data from many sensors during operation. A small
-subset of critical data is transmitted from the vehicles in real time to facilitate fleet
-management. The rest of the sensor data is collected, compressed, and uploaded daily
-when the vehicles return to home base. Each vehicle usually generates 200 to 500
-megabytes of data per day.
+There are 2 million TerramEarth vehicles in operation currently, and we see 20% yearly growth.
+Vehicles collect telemetry data from many sensors during operation.
+A small subset of critical data is transmitted from the vehicles in real time to facilitate fleet management.
+The rest of the sensor data is collected, compressed, and uploaded daily when the vehicles return to home base.
+Each vehicle usually generates 200 to 500 megabytes of data per day.
 
-現在、200万台のTerramEarth車両が稼働しており、年間20％の稼働数の成長があると認識しています。
+現在、200万台のTerramEarth車両が稼働しており、年間20％の成長が見られます。
 車両は、動作中に多くのセンサーからテレメトリデータを収集します。
-小さな重要なデータのサブセットは、車両からリアルタイムで送信され、車両管理を容易にします。
-残りのセンサーデータは毎日収集、車両がホームベースに戻ったとき、圧縮、アップロードされます。
-各車両は通常、1日あたり200から500メガバイトのデータを生成します
+重要なデータの小さなサブセットが車両からリアルタイムで送信され、車両の管理が容易になります。
+残りのセンサーデータは、車両がホームベースに戻るときに毎日収集、圧縮、アップロードされます。
+通常、各車両は1日あたり200?500メガバイトのデータを生成します。
 
 
 [Existing technical environment]
-TerramEarth’s vehicle data aggregation and analysis infrastructure resides in Google
-Cloud and serves clients from all around the world. A growing amount of sensor data is
-captured from their two main manufacturing plants and sent to private data centers that
-contain their legacy inventory and logistics management systems. The private data
-centers have multiple network interconnects configured to Google Cloud.
-The web frontend for dealers and customers is running in Google Cloud and allows
-access to stock management and analytics.
+TerramEarth's vehicle data aggregation and analysis infrastructure resides in Google Cloud and serves clients from all around the world.
+A growing amount of sensor data is captured from their two main manufacturing plants and sent to private data centers that contain their legacy inventory and logistics management systems.
+The private data centers have multiple network interconnects configured to Google Cloud.
+The web frontend for dealers and customers is running in Google Cloud and allows access to stock management and analytics.
 
-TerramEarthの車両データの集約および分析インフラストラクチャはGoogleにあります
-クラウドと世界中のクライアントにサービスを提供します。
-ますます多くのセンサーデータが2つの主要な製造工場から取得され、プライベートデータセンターに送信されました。
-レガシー在庫およびロジスティクス管理システムが含まれています。
-個人データセンターには、GoogleCloudに構成された複数のネットワーク相互接続があります。
-ディーラーと顧客向けのウェブフロントエンドはGoogleCloudで実行されており、在庫管理と分析へのアクセス。
+TerramEarthの車両データ集約および分析インフラストラクチャはGoogleCloudに常駐し、世界中のクライアントにサービスを提供しています。
+ますます多くのセンサーデータが2つの主要な製造工場から取得され、レガシー在庫およびロジスティクス管理システムを含むプライベートデータセンターに送信されます。
+プライベートデータセンターには、GoogleCloudに構成された複数のネットワーク相互接続があります。
+ディーラーと顧客向けのウェブフロントエンドはGoogleCloudで実行されており、在庫管理と分析にアクセスできます。
+
 
 [Business requirements]
 ・Predict and detect vehicle malfunction and rapidly ship parts to dealerships for just-intime repair where possible.
@@ -79,20 +74,10 @@ TerramEarthの車両データの集約および分析インフラストラクチ
 
 
 [Executive statement]
-Our competitive advantage has always been our focus on the customer, with our
-ability to provide excellent customer service and minimize vehicle downtimes. After
-moving multiple systems into Google Cloud, we are seeking new ways to provide
-best-in-class online fleet management services to our customers and improve
-operations of our dealerships. Our 5-year strategic plan is to create a partner
-ecosystem of new products by enabling access to our data, increasing
-autonomous operation capabilities of our vehicles, and creating a path to move the
-remaining legacy systems to the cloud.
+Our competitive advantage has always been our focus on the customer, with our ability to provide excellent customer service and minimize vehicle downtimes.
+After moving multiple systems into Google Cloud, we are seeking new ways to provide best-in-class online fleet management services to our customers and improve operations of our dealerships.
+Our 5-year strategic plan is to create a partner ecosystem of new products by enabling access to our data, increasing autonomous operation capabilities of our vehicles, and creating a path to move the remaining legacy systems to the cloud.
 
-私たちの競争上の優位性は、常にお客様に焦点を当てることでした。
-優れた顧客サービスを提供し、車両のダウンタイムを最小限に抑える能力。
-後複数のシステムをGoogleCloudに移行し、提供する新しい方法を模索しています
-クラス最高のオンラインフリート管理サービスをお客様に提供し、ディーラーの運営を改善します。
-私たちの5年間の戦略計画は、パートナーを作成することです
-データへのアクセスを可能にすることによる新製品のエコシステム、増加
-私たちの車の自律操作機能、および移動するためのパスの作成
-残りのレガシーシステムをクラウドに。
+私たちの競争上の優位性は、常にお客様に焦点を当てることであり、優れたカスタマーサービスを提供し、車両のダウンタイムを最小限に抑えることができます。
+複数のシステムをGoogleCloudに移行した後、クラス最高のオンラインフリート管理サービスをお客様に提供し、ディーラーの運営を改善する新しい方法を模索しています。
+5年間の戦略計画は、データへのアクセスを可能にし、車両の自律運用機能を強化し、残りのレガシーシステムをクラウドに移行するためのパスを作成することにより、新製品のパートナーエコシステムを作成することです。
