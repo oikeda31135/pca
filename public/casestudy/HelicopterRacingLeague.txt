@@ -1,0 +1,97 @@
+Helicopter Racing League
+
+[Company overview]
+Helicopter Racing League (HRL) is a global sports league for competitive helicopter racing.
+Each year HRL holds the world championship and several regional league competitions where teams compete to earn a spot in the world championship.
+HRL offers a paid service to stream the races all over the world with live telemetry and predictions throughout each race.
+
+ヘリコプターレーシングリーグ（HRL）は、競争力のあるヘリコプターレースのためのグローバルスポーツリーグです。
+HRLは毎年、世界選手権といくつかの地域リーグ大会を開催し、チームが世界選手権のスポットを獲得するために競います。
+HRLは、ライブテレメトリと各レース全体の予測を使用して、世界中のレースをストリーミングするための有料サービスを提供します。
+
+
+[Solution concept]
+HRL wants to migrate their existing service to a new platform to expand their use of managed AI and ML services to facilitate race predictions.
+Additionally, as new fans engage with the sport, particularly in emerging regions, they want to move the serving of their content, both real-time and recorded, closer to their users.
+
+HRLは、既存のサービスを新しいプラットフォームに移行して、マネージドAIおよびMLサービスの使用を拡大し、レースの予測を容易にしたいと考えています。
+さらに、特に新興地域で新しいファンがスポーツに参加するにつれて、コンテンツの配信をリアルタイムと記録の両方でユーザーに近づけたいと考えています。
+
+
+[Existing technical environment]
+HRL is a public cloud-first company; the core of their mission-critical applications runs on their current public cloud provider.
+Video recording and editing is performed at the race tracks, and the content is encoded and transcoded, where needed, in the cloud. 
+
+Enterprise-grade connectivity and local compute is provided by truck-mounted mobile data centers.
+Their race prediction services are hosted exclusively on their existing public cloud provider.
+Their existing technical environment is as follows:
+・Existing content is stored in an object storage service on their existing public cloud provider.
+・Video encoding and transcoding is performed on VMs created for each job.
+・Race predictions are performed using TensorFlow running on VMs in the current public cloud provider.
+
+HRLはパブリッククラウドファーストの会社です。
+ミッションクリティカルなアプリケーションのコアは、現在のパブリッククラウドプロバイダーで実行されます。
+ビデオの録画と編集はレーストラックで実行され、コンテンツは必要に応じてクラウドでエンコードおよびトランスコードされます。
+
+エンタープライズグレードの接続とローカルコンピューティングは、トラックに搭載されたモバイルデータセンターによって提供されます。
+彼らのレース予測サービスは、既存のパブリッククラウドプロバイダーでのみホストされています。
+彼らの既存の技術環境は次のとおりです。
+・既存のコンテンツは、既存のパブリッククラウドプロバイダーのオブジェクトストレージサービスに保存されます。
+・ビデオのエンコードとトランスコーディングは、ジョブごとに作成されたVMで実行されます。
+・レース予測は、現在のパブリッククラウドプロバイダーのVMで実行されているTensorFlowを使用して実行されます。
+
+
+[Business requirements]
+HRL’s owners want to expand their predictive capabilities and reduce latency for their viewers in emerging markets.
+Their requirements are:
+・Support ability to expose the predictive models to partners.
+・Increase predictive capabilities during and before races:
+    ○Race results
+    ○Mechanical failures
+    ○Crowd sentiment
+・Increase telemetry and create additional insights.
+・Measure fan engagement with new predictions.
+・Enhance global availability and quality of the broadcasts.
+・Increase the number of concurrent viewers.
+・Minimize operational complexity.
+・Ensure compliance with regulations.
+・Create a merchandising revenue stream.
+
+HRLの所有者は、予測機能を拡張し、新興市場での視聴者の待ち時間を短縮したいと考えています。
+それらの要件は次のとおりです。
+・予測モデルをパートナーに公開する機能をサポートします。
+・レース中およびレース前の予測能力の向上：
+    ○レース結果
+    ○機械的故障
+    ○群衆の感情
+・テレメトリを増やし、追加の洞察を作成します。
+・新しい予測でファンのエンゲージメントを測定します。
+・放送のグローバルな可用性と品質を向上させます。
+・同時視聴者数を増やす。
+・運用の複雑さを最小限に抑えます。
+・規制の遵守を確保します。
+・マーチャンダイジングの収益源を作成します。
+
+
+[Technical requirements]
+・Maintain or increase prediction throughput and accuracy.
+・Reduce viewer latency.
+・Increase transcoding performance.
+・Create real-time analytics of viewer consumption patterns and engagement.
+・Create a data mart to enable processing of large volumes of race data.
+
+・予測スループットと精度を維持または向上させます。
+・視聴者の待ち時間を短縮します。
+・トランスコーディングのパフォーマンスを向上させます。
+・視聴者の消費パターンとエンゲージメントのリアルタイム分析を作成します。
+・大量のレースデータを処理できるデータマートを作成します。
+
+
+[Executive statement]
+Our CEO, S. Hawke, wants to bring high-adrenaline racing to fans all around the world.
+We listen to our fans, and they want enhanced video streams that include predictions of events within the race (e.g., overtaking).
+Our current platform allows us to predict race outcomes but lacks the facility to support real-time predictions during races and the capacity to process season-long results.
+
+当社のCEOであるS.Hawkeは、世界中のファンに高アドレナリンレースを提供したいと考えています。
+私たちはファンの声に耳を傾け、彼らはレース内のイベントの予測（追い越しなど）を含む強化されたビデオストリームを望んでいます。
+現在のプラットフォームでは、レースの結果を予測できますが、レース中のリアルタイムの予測をサポートする機能と、シーズン全体の結果を処理する機能がありません。

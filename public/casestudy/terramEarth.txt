@@ -1,0 +1,98 @@
+TerramEarh
+
+[Company overview]
+TerramEarth manufactures heavy equipment for the mining and agricultural industries.
+They currently have over 500 dealers and service centers in 100 countries. Their mission
+is to build products that make their customers more productive.
+
+TerramEarthは、鉱業および農業産業向けの重機を製造しています。
+現在、100か国に500を超えるディーラーとサービスセンターがあります。彼らの使命
+顧客の生産性を高める製品を構築することです。
+
+
+[Solution concept]
+There are 2 million TerramEarth vehicles in operation currently, and we see 20% yearly
+growth. Vehicles collect telemetry data from many sensors during operation. A small
+subset of critical data is transmitted from the vehicles in real time to facilitate fleet
+management. The rest of the sensor data is collected, compressed, and uploaded daily
+when the vehicles return to home base. Each vehicle usually generates 200 to 500
+megabytes of data per day.
+
+現在、200万台のTerramEarth車両が稼働しており、年間20％の稼働数の成長があると認識しています。
+車両は、動作中に多くのセンサーからテレメトリデータを収集します。
+小さな重要なデータのサブセットは、車両からリアルタイムで送信され、車両管理を容易にします。
+残りのセンサーデータは毎日収集、車両がホームベースに戻ったとき、圧縮、アップロードされます。
+各車両は通常、1日あたり200から500メガバイトのデータを生成します
+
+
+[Existing technical environment]
+TerramEarth’s vehicle data aggregation and analysis infrastructure resides in Google
+Cloud and serves clients from all around the world. A growing amount of sensor data is
+captured from their two main manufacturing plants and sent to private data centers that
+contain their legacy inventory and logistics management systems. The private data
+centers have multiple network interconnects configured to Google Cloud.
+The web frontend for dealers and customers is running in Google Cloud and allows
+access to stock management and analytics.
+
+TerramEarthの車両データの集約および分析インフラストラクチャはGoogleにあります
+クラウドと世界中のクライアントにサービスを提供します。
+ますます多くのセンサーデータが2つの主要な製造工場から取得され、プライベートデータセンターに送信されました。
+レガシー在庫およびロジスティクス管理システムが含まれています。
+個人データセンターには、GoogleCloudに構成された複数のネットワーク相互接続があります。
+ディーラーと顧客向けのウェブフロントエンドはGoogleCloudで実行されており、在庫管理と分析へのアクセス。
+
+[Business requirements]
+・Predict and detect vehicle malfunction and rapidly ship parts to dealerships for just-intime repair where possible.
+  車両の故障を予測して検出し、可能な場合はジャストインタイムの修理のために部品を販売店に迅速に発送します。
+
+・Decrease cloud operational costs and adapt to seasonality.
+  クラウドの運用コストを削減し、季節性に適応します。
+
+・Increase speed and reliability of development workflow.
+  開発ワークフローの速度と信頼性を向上させます。
+
+・Allow remote developers to be productive without compromising code or data security.
+  リモート開発者がコードやデータのセキュリティを損なうことなく生産性を発揮できるようにします。
+
+・Create a flexible and scalable platform for developers to create custom API services for dealers and partners.
+  開発者がディーラーやパートナー向けのカスタムAPIサービスを作成するための柔軟でスケーラブルなプラットフォームを作成します。
+
+
+[Technical requirements]
+・Create a new abstraction layer for HTTP API access to their legacy systems to enable a gradual move into the cloud without disrupting operations.
+  レガシーシステムへのHTTPAPIアクセス用の新しい抽象化レイヤーを作成して、操作を中断することなくクラウドに段階的に移行できるようにします。
+
+・Modernize all CI/CD pipelines to allow developers to deploy container-based workloads in highly scalable environments.
+  すべてのCI / CDパイプラインを最新化して、開発者がコンテナーベースのワークロードを高度にスケーラブルな環境にデプロイできるようにします。
+
+・Allow developers to run experiments without compromising security and governance requirements.
+  開発者がセキュリティとガバナンスの要件を損なうことなく実験を実行できるようにします。
+
+・Create a self-service portal for internal and partner developers to create new projects,request resources for data analytics jobs, and centrally manage access to the API endpoints.
+  内部およびパートナーの開発者が新しいプロジェクトを作成し、データ分析ジョブのリソースを要求し、APIエンドポイントへのアクセスを一元管理するためのセルフサービスポータルを作成します。
+
+・Use cloud-native solutions for keys and secrets management and optimize for identitybased access.
+  キーとシークレットの管理にクラウドネイティブソリューションを使用し、IDベースのアクセスを最適化します。
+
+・Improve and standardize tools necessary for application and network monitoring and troubleshooting.
+  アプリケーションとネットワークの監視とトラブルシューティングに必要なツールを改善および標準化します。
+
+
+[Executive statement]
+Our competitive advantage has always been our focus on the customer, with our
+ability to provide excellent customer service and minimize vehicle downtimes. After
+moving multiple systems into Google Cloud, we are seeking new ways to provide
+best-in-class online fleet management services to our customers and improve
+operations of our dealerships. Our 5-year strategic plan is to create a partner
+ecosystem of new products by enabling access to our data, increasing
+autonomous operation capabilities of our vehicles, and creating a path to move the
+remaining legacy systems to the cloud.
+
+私たちの競争上の優位性は、常にお客様に焦点を当てることでした。
+優れた顧客サービスを提供し、車両のダウンタイムを最小限に抑える能力。
+後複数のシステムをGoogleCloudに移行し、提供する新しい方法を模索しています
+クラス最高のオンラインフリート管理サービスをお客様に提供し、ディーラーの運営を改善します。
+私たちの5年間の戦略計画は、パートナーを作成することです
+データへのアクセスを可能にすることによる新製品のエコシステム、増加
+私たちの車の自律操作機能、および移動するためのパスの作成
+残りのレガシーシステムをクラウドに。

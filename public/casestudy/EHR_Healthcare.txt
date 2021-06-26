@@ -1,0 +1,88 @@
+EHR Healthcare
+
+[Company overview]
+
+EHR Healthcare is a leading provider of electronic health record software to the medical industry.
+EHR Healthcare provides their software as a service to multi-national medical offices, hospitals, and insurance providers.
+
+EHR Healthcareは、医療業界に電子健康記録ソフトウェアを提供する大手プロバイダーです。
+EHR Healthcareは、多国籍の診療所、病院、保険会社にサービスとしてソフトウェアを提供しています。
+
+
+[Solution concept]
+Due to rapid changes in the healthcare and insurance industry, EHR Healthcare’s business has been growing exponentially year over year.
+They need to be able to scale their environment, adapt their disaster recovery plan, and roll out new continuous deployment capabilities to update their software at a fast pace.
+Google Cloud has been chosen to replace their current colocation facilities.
+
+ヘルスケアおよび保険業界の急速な変化により、EHRヘルスケアのビジネスは年々指数関数的に成長しています。
+彼らは、環境を拡張し、災害復旧計画を適応させ、新しい継続的展開機能を展開して、ソフトウェアを速いペースで更新できる必要があります。
+Google Cloudは、現在のコロケーション施設に代わるものとして選ばれました。
+
+[Existing technical environment]
+EHR’s software is currently hosted in multiple colocation facilities.
+The lease on one of the data centers is about to expire.
+Customer-facing applications are web-based, and many have recently been containerized to run on a group of Kubernetes clusters.
+Data is stored in a mixture of relational and NoSQL databases (MySQL, MS SQL Server, Redis, and MongoDB).
+EHR is hosting several legacy file- and API-based integrations with insurance providers on-premises.
+These systems are scheduled to be replaced over the next several years.
+There is no plan to upgrade or move these systems at the current time.
+Users are managed via Microsoft Active Directory. Monitoring is currently being done via various open source tools.
+Alerts are sent via email and are often ignored.
+
+EHRのソフトウェアは現在、複数のコロケーション施設でホストされています。
+データセンターの1つのリースが間もなく期限切れになります。
+顧客向けのアプリケーションはWebベースであり、最近、Kubernetesクラスターのグループで実行するために多くのアプリケーションがコンテナー化されています。
+データは、リレーショナルデータベースとNoSQLデータベース（MySQL、MS SQL Server、Redis、MongoDB）が混在して保存されます。
+EHRは、オンプレミスの保険会社とのいくつかのレガシーファイルベースおよびAPIベースの統合をホストしています。
+これらのシステムは、今後数年間で交換される予定です。
+現時点では、これらのシステムをアップグレードまたは移動する予定はありません。
+ユーザーはMicrosoftActiveDirectoryを介して管理されます。監視は現在、さまざまなオープンソースツールを介して行われています。
+アラートは電子メールで送信され、無視されることがよくあります。
+
+[Business requirements]
+・On-board new insurance providers as quickly as possible.
+・Provide a minimum 99.9% availability for all customer-facing systems.
+・Provide centralized visibility and proactive action on system performance and usage.
+・Increase ability to provide insights into healthcare trends.
+・Reduce latency to all customers.
+・Maintain regulatory compliance.
+・Decrease infrastructure administration costs.
+・Make predictions and generate reports on industry trends based on provider data.
+
+・新しい保険会社をできるだけ早く乗船させます。
+・すべての顧客対応システムに最低99.9％の可用性を提供します。
+・システムのパフォーマンスと使用状況に関する一元化された可視性とプロアクティブなアクションを提供します。
+・ヘルスケアの傾向に関する洞察を提供する能力を高めます。
+・すべてのお客様の待ち時間を短縮します。
+・法令順守を維持します。
+・インフラ管理コストを削減します。
+・プロバイダーのデータに基づいて、業界の動向を予測し、レポートを作成します。
+
+
+[Technical requirements]
+・Maintain legacy interfaces to insurance providers with connectivity to both on-premises systems and cloud providers.
+・Provide a consistent way to manage customer-facing applications that are container-based.
+・Provide a secure and high-performance connection between on-premises systems and Google Cloud.
+・Provide consistent logging, log retention, monitoring, and alerting capabilities.
+・Maintain and manage multiple container-based environments.
+・Dynamically scale and provision new environments.
+・Create interfaces to ingest and process data from new providers.
+
+・オンプレミスシステムとクラウドプロバイダーの両方に接続できる保険プロバイダーへのレガシーインターフェイスを維持します。
+・コンテナベースの顧客向けアプリケーションを一貫して管理する方法を提供します。
+・オンプレミスシステムとGoogleCloud間の安全で高性能な接続を提供します。
+・一貫したログ、ログ保持、監視、およびアラート機能を提供します。
+・複数のコンテナベースの環境を維持および管理します。
+・新しい環境を動的にスケーリングしてプロビジョニングします。
+・新しいプロバイダーからデータを取り込んで処理するためのインターフェースを作成します。
+
+
+[Executive statement]
+Our on-premises strategy has worked for years but has required a major investment of time and money in training our team on distinctly different systems, managing similar but separate environments, and responding to outages.
+Many of these outages have been a result of misconfigured systems, inadequate capacity to manage spikes in traffic, and inconsistent monitoring practices.
+We want to use Google Cloud to leverage a scalable, resilient platform that can span multiple environments seamlessly and provide a consistent and stable user experience that positions us for future growth.
+
+オンプレミス戦略は何年にもわたって機能してきましたが、明確に異なるシステムでチームをトレーニングし、類似しているが別々の環境を管理し、停止に対応するために時間とお金の多大な投資を必要としました。
+これらの停止の多くは、システムの構成ミス、トラフィックの急増を管理するための不十分な容量、および一貫性のない監視方法の結果です。
+Google Cloudを使用して、複数の環境にシームレスにまたがることができるスケーラブルで復元力のあるプラットフォームを活用し、将来の成長に向けて一貫性のある安定したユーザーエクスペリエンスを提供したいと考えています。
+
