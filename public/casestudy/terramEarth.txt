@@ -21,7 +21,7 @@ Each vehicle usually generates 200 to 500 megabytes of data per day.
 車両は、動作中に多くのセンサーからテレメトリデータを収集します。
 重要なデータの小さなサブセットが車両からリアルタイムで送信され、車両の管理が容易になります。
 残りのセンサーデータは、車両がホームベースに戻るときに毎日収集、圧縮、アップロードされます。
-通常、各車両は1日あたり200?500メガバイトのデータを生成します。
+通常、各車両は1日あたり200〜500メガバイトのデータを生成します。
 
 
 [Existing technical environment]
@@ -58,7 +58,7 @@ TerramEarthの車両データ集約および分析インフラストラクチャ
   レガシーシステムへのHTTPAPIアクセス用の新しい抽象化レイヤーを作成して、操作を中断することなくクラウドに段階的に移行できるようにします。
 
 ・Modernize all CI/CD pipelines to allow developers to deploy container-based workloads in highly scalable environments.
-  すべてのCI / CDパイプラインを最新化して、開発者がコンテナーベースのワークロードを高度にスケーラブルな環境にデプロイできるようにします。
+  すべてのCI/CDパイプラインを最新化して、開発者がコンテナーベースのワークロードを高度にスケーラブルな環境にデプロイできるようにします。
 
 ・Allow developers to run experiments without compromising security and governance requirements.
   開発者がセキュリティとガバナンスの要件を損なうことなく実験を実行できるようにします。
